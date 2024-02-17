@@ -9,4 +9,8 @@ RUN install-php-extensions @composer
 
 RUN a2enmod rewrite 
 
+RUN usermod -u 1000 www-data && groupmod -g 1000 www-data
+
+USER "1000:1000"
+
 WORKDIR /var/www/html

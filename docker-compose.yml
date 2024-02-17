@@ -5,10 +5,10 @@ services:
     volumes:
       - ./mysql-data:/var/lib/mysql   
     environment:
-      MYSQL_PASSWORD: root
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_USER: user
-      MYSQL_DATABASE: project
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
     networks:
       - phpapp
 
